@@ -1,3 +1,19 @@
+import About from "./containers/about/About";
+import Contact from "./containers/contact/Contact";
+import Home from "./containers/home/Home";
+import Pricing from "./containers/pricing/Pricing";
+import Programs from "./containers/programs/Programs";
+import Testimonial from "./containers/testimonial/Testimonial";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Home />
+      <About />
+      <Programs />
+      <Pricing />
+      <Testimonial />
+      <Contact />
+    </>
+  );
 }
