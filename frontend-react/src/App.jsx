@@ -5,6 +5,7 @@ import Pricing from "./containers/pricing/Pricing";
 import Programs from "./containers/programs/Programs";
 import Testimonial from "./containers/testimonial/Testimonial";
 import Footer from "./components/footer/Footer";
+import Temp from "./containers/Temp";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Home />
       <div className="px-5 py-10 md:px-10 xl:px-20 2xl:px-28">
         <About />
+        <Temp/>
         <Programs />
         <Pricing />
         <Testimonial />
