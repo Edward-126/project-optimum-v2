@@ -23,7 +23,7 @@ To explore the Optimum Gym website locally or contribute to its development, fol
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Edward-126/optimum-gym.git
+   git clone https://github.com/Edward-126/optimum-gym-v2.git
    ```
 
 ---
