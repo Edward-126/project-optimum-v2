@@ -36,7 +36,9 @@ const Navbar = () => {
     <motion.div
       variants={nav}
       animate={nav.float}
-      className={`px-6 py-4 ${isOpen ? "h-auto" : "h-15"}`}
+      className={`bg-gradient-to-b from-black via-50% px-6 py-4 text-gray-50 ${
+        isOpen ? "h-auto" : "h-15"
+      }`}
     >
       <div className="container mx-auto flex items-center justify-between">
         <motion.div
@@ -45,7 +47,7 @@ const Navbar = () => {
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
           className="text-text"
         >
-          <a href="#" className=" text-3xl font-semibold">
+          <a href="#" className=" text-4xl font-semibold text-gray-50">
             OPTIMUM™
           </a>
         </motion.div>
@@ -55,7 +57,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="text-text focus:outline-none"
           >
-            <RiMenu3Fill className="text-2xl" />
+            <RiMenu3Fill className="text-2xl text-gray-50" />
           </button>
         </div>
 
@@ -64,7 +66,7 @@ const Navbar = () => {
             variants={container}
             initial="hidden"
             animate="show"
-            className="space-x-4 lg:flex"
+            className="space-x-8 lg:flex"
           >
             <motion.li
               variants={item}
@@ -72,7 +74,10 @@ const Navbar = () => {
               whileTap={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <a href="#about" className="block p-2">
+              <a
+                href="#about"
+                className="block p-2 transition-all hover:text-red-500"
+              >
                 About
               </a>
             </motion.li>
@@ -82,7 +87,10 @@ const Navbar = () => {
               whileTap={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <a href="#programs" className="block p-2">
+              <a
+                href="#programs"
+                className="block p-2 transition-all hover:text-red-500"
+              >
                 Programs
               </a>
             </motion.li>
@@ -92,7 +100,10 @@ const Navbar = () => {
               whileTap={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <a href="#pricing" className="block p-2">
+              <a
+                href="#pricing"
+                className="block p-2 transition-all hover:text-red-500"
+              >
                 Pricing
               </a>
             </motion.li>
@@ -102,7 +113,10 @@ const Navbar = () => {
               whileTap={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <a href="#testimonial" className="block p-2">
+              <a
+                href="#testimonial"
+                className="block p-2 transition-all hover:text-red-500"
+              >
                 Testimonial
               </a>
             </motion.li>
@@ -114,7 +128,7 @@ const Navbar = () => {
             >
               <a
                 href="#contact"
-                className="block rounded-full bg-gray-900 p-2 px-4 text-gray-50"
+                className="block p-2 transition-all hover:text-red-500"
               >
                 Contact Us
               </a>
@@ -129,32 +143,44 @@ const Navbar = () => {
             variants={container}
             initial="hidden"
             animate="show"
-            className="text-text"
+            className=" text-gray-50"
           >
             <motion.li variants={item}>
-              <a href="#about" className="block p-2">
+              <a
+                href="#about"
+                className="mt-3 block p-2 transition-all hover:text-red-500"
+              >
                 About
               </a>
             </motion.li>
             <motion.li variants={item}>
-              <a href="#programs" className="block p-2">
+              <a
+                href="#programs"
+                className="block p-2 transition-all hover:text-red-500"
+              >
                 Programs
               </a>
             </motion.li>
             <motion.li variants={item}>
-              <a href="#pricing" className="block p-2">
+              <a
+                href="#pricing"
+                className="block p-2 transition-all hover:text-red-500"
+              >
                 Pricing
               </a>
             </motion.li>
             <motion.li variants={item}>
-              <a href="#testimonial" className="block p-2">
+              <a
+                href="#testimonial"
+                className="block p-2 transition-all hover:text-red-500"
+              >
                 Testimonial
               </a>
             </motion.li>
             <motion.li variants={item}>
               <a
                 href="#contact"
-                className="block rounded-lg bg-gray-900 p-2 px-4 text-gray-50"
+                className="block p-2 transition-all hover:text-red-500"
               >
                 Contact Us
               </a>
