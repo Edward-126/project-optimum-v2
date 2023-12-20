@@ -112,7 +112,10 @@ const Navbar = () => {
               whileTap={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <a href="#contact" className="block p-2">
+              <a
+                href="#contact"
+                className="block rounded-full bg-gray-900 p-2 px-4 text-gray-50"
+              >
                 Contact Us
               </a>
             </motion.li>
@@ -149,7 +152,10 @@ const Navbar = () => {
               </a>
             </motion.li>
             <motion.li variants={item}>
-              <a href="#contact" className="block p-2">
+              <a
+                href="#contact"
+                className="block rounded-lg bg-gray-900 p-2 px-4 text-gray-50"
+              >
                 Contact Us
               </a>
             </motion.li>
