@@ -1,5 +1,7 @@
 import Lenis from "@studio-freight/lenis";
 
+import { inject } from "@vercel/analytics";
+
 import About from "./containers/about/About";
 import Contact from "./containers/contact/Contact";
 import Home from "./containers/home/Home";
@@ -36,3 +38,5 @@ export default function App() {
     </>
   );
 }
+
+inject();
