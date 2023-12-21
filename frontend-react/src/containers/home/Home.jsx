@@ -46,7 +46,7 @@ export default function Home() {
               >
                 <motion.a
                   href=""
-                  className="text-md mr-5 rounded-lg border-2 border-red-600
+                  className="text-md mr-5 rounded-md border-2 border-red-600
              bg-red-600 p-2 px-5 transition-all hover:border-red-500 hover:bg-red-500 md:p-2 md:px-6 md:text-xl"
                 >
                   Discover More
@@ -62,7 +62,7 @@ export default function Home() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   href="#contact"
-                  className="m-5 hidden rounded-lg border-2 border-red-600 bg-transparent p-2 px-6 text-xl transition-all hover:bg-red-600 md:inline"
+                  className="m-5 hidden rounded-md border-2 border-red-600 bg-transparent p-2 px-6 text-xl transition-all hover:bg-red-600 md:inline"
                 >
                   Register Now
                 </motion.a>

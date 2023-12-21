@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <footer className="mb-5 px-4 text-center text-gray-500">
+      <footer className="mb-5 px-4 text-center text-gray-100">
         <small className="mb-2 block text-xs">
           <span>© 2023 </span>
           <span className="font-bold uppercase">Optimum Gym</span>

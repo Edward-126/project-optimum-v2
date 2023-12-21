@@ -6,7 +6,7 @@ export default function Programs() {
   const [programs, setPrograms] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "programs"]';
+    const query = '*[_type == "programs"] | order(order asc)';
 
     client.fetch(query).then((data) => {
       setPrograms(data);
@@ -30,7 +30,7 @@ export default function Programs() {
       <div className="mt-8 grid gap-8 lg:grid-cols-12">
         {programs.map((program, index) => (
           <div className="lg:col-span-6" key={index}>
-            <div className="overflow-hidden rounded-lg border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900">
+            <div className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900">
               <img
                 src={urlFor(program.imgUrl)}
                 alt={program.name}

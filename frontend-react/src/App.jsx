@@ -14,8 +14,8 @@ export default function App() {
       <div className="px-5 py-10 md:px-10 xl:px-20 2xl:px-28">
         <About />
         <Programs />
-        <Temp />
         <Pricing />
+        <Temp />
         <Testimonial />
         <Contact />
       </div>

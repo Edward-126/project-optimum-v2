@@ -22,7 +22,7 @@ export default function About() {
               <img
                 src={urlFor(abouts.imgUrl)}
                 alt={abouts.name}
-                className="w-full rounded-lg"
+                className="w-full rounded-md"
               />
               <div className=" absolute bottom-0 left-0 w-full rounded-b-lg bg-black/60">
                 <h1 className="my-4 text-center text-lg">{abouts.name}</h1>
@@ -32,7 +32,7 @@ export default function About() {
           <div className="col-span-6 lg:col-span-7">
             <div className="1 sticky top-10 mt-4 h-fit overflow-hidden lg:ml-8 lg:mt-0">
               <h1 className="mb-6 text-6xl font-bold">
-                About <span className=" text-red-500">Mr.Manoj Perera</span>
+                About <span className=" text-red-600">Mr.Manoj Perera</span>
               </h1>
               <p className="text-xl">{abouts.about}</p>
             </div>
