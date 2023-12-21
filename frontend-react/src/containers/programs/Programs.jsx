@@ -16,7 +16,7 @@ export default function Programs() {
   return (
     <div className="pt-16" id="programs">
       <div className="">
-        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-7xl">
+        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-6xl">
           Our Programs
         </h2>
         <p className="text-xl">

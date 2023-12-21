@@ -29,7 +29,7 @@ export default function Pricing() {
   return (
     <div className="pt-16" id="pricing">
       <div className="text-center">
-        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-7xl">
+        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-6xl">
           Our Membership Plans
         </h2>
         <p className="text-xl">

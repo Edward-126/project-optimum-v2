@@ -21,7 +21,7 @@ export default function Testimonial() {
   return (
     <div id="testimonial" className="pt-16">
       <div className="text-center">
-        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-7xl">
+        <h2 className="mb-6 text-7xl font-bold max-md:text-4xl md:text-5xl">
           What People Say About Us
         </h2>
       </div>

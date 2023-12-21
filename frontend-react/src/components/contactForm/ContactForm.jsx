@@ -89,7 +89,7 @@ const ContactForm = () => {
             </motion.div>
 
             <button
-              className="mt-0 w-full rounded-lg bg-red-600 p-2 px-4 text-gray-50 drop-shadow sm:col-span-2"
+              className="mt-0 w-full rounded-lg bg-red-600 p-3 px-4 text-lg text-gray-50 drop-shadow sm:col-span-2"
               type="submit"
               disabled={isSubmitting}
             >
