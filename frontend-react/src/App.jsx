@@ -13,8 +13,8 @@ export default function App() {
       <Home />
       <div className="px-5 py-10 md:px-10 xl:px-20 2xl:px-28">
         <About />
-        <Temp/>
         <Programs />
+        <Temp />
         <Pricing />
         <Testimonial />
         <Contact />
