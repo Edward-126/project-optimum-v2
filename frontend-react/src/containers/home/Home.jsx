@@ -44,7 +44,7 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <motion.a
-                  href=""
+                  href="#programs"
                   className="text-md mr-5 rounded-md border-2 border-red-600
              bg-red-600 p-2 px-5 transition-all hover:border-red-500 hover:bg-red-500 md:p-2 md:px-6 md:text-xl"
                 >
