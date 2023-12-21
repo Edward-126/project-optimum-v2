@@ -24,7 +24,7 @@ export default function About() {
                 alt={abouts.name}
                 className="w-full rounded-md"
               />
-              <div className=" absolute bottom-0 left-0 w-full rounded-b-lg bg-black/60">
+              <div className=" absolute bottom-0 left-0 w-full rounded-b-md bg-black/60">
                 <h1 className="my-4 text-center text-lg">{abouts.name}</h1>
               </div>
             </div>
