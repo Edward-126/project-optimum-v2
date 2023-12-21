@@ -16,7 +16,6 @@ export default function App() {
         <Programs />
         <Pricing />
         <Testimonial />
-        <Temp />
         <Contact />
       </div>
       <Footer />

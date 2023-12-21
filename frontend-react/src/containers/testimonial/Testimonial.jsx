@@ -62,10 +62,10 @@ export default function Testimonial() {
                       alt={testimonials.name}
                     />
                     <div className="ml-4">
-                      <p className="text-lg font-bold text-gray-300">
+                      <p className="text-lg font-bold capitalize text-gray-300">
                         {testimonials.name}
                       </p>
-                      <p className="text-sm  text-gray-500">
+                      <p className="text-sm  capitalize text-gray-500">
                         {testimonials.position}
                       </p>
                     </div>
