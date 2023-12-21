@@ -1,7 +1,9 @@
 import { urlFor, client } from "../../client";
 import { IoIosCheckmarkCircle } from "react-icons/io";
+import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
+import { lateralTransition, stagger } from "../../constants/transitions";
 import PriceDetailsModal from "../../components/priceModal/PriceDetailsModal";
 
 export default function Pricing() {
@@ -28,20 +30,36 @@ export default function Pricing() {
 
   return (
     <div className="pt-16" id="pricing">
-      <div className="text-center">
-        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-6xl">
+      <motion.div variants={stagger} className="text-center">
+        <motion.h2
+          variants={lateralTransition}
+          whileInView={lateralTransition.floatUp}
+          className="mb-6 text-7xl font-bold max-md:text-5xl md:text-6xl"
+        >
           Our Membership Plans
-        </h2>
-        <p className="text-xl">
+        </motion.h2>
+        <motion.p
+          variants={lateralTransition}
+          whileInView={lateralTransition.floatUp}
+          className="text-xl"
+        >
           Choose the plan that suits your fitness goals and lifestyle. Whether
           you're looking for a quick workout, monthly access, or a year-round
           commitment, we have a plan for everyone.
-        </p>
-      </div>
-      <div className="mt-8 grid gap-8 lg:grid-cols-12">
+        </motion.p>
+      </motion.div>
+      <motion.div
+        variants={stagger}
+        className="mt-8 grid gap-8 lg:grid-cols-12"
+      >
         {pricing.map((price, index) => (
-          <div className="lg:col-span-3" key={index}>
-            <div className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900">
+          <motion.div
+            variants={lateralTransition}
+            whileInView={lateralTransition.floatUp}
+            className="lg:col-span-3"
+            key={index}
+          >
+            <motion.div className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900">
               <div className="p-4">
                 <h2 className="text-2xl font-semibold text-gray-100">
                   {price.name}
@@ -63,17 +81,20 @@ export default function Pricing() {
                   </p>
                 ))}
 
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   className="mt-6 rounded-md bg-red-600 p-2 px-4"
                   onClick={() => openModal(price)}
                 >
                   View Details
-                </button>
+                </motion.button>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       {selectedPricing && (
         <PriceDetailsModal
           isOpen={isModalOpen}

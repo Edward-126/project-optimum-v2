@@ -2,9 +2,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { urlFor, client } from "../../client";
 import { FaQuoteLeft } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 
+import { lateralTransition, stagger } from "../../constants/transitions";
 import { useState, useEffect } from "react";
 
 export default function Testimonial() {
@@ -20,12 +22,20 @@ export default function Testimonial() {
 
   return (
     <div id="testimonial" className="pt-16">
-      <div className="text-center">
+      <motion.div
+        variants={lateralTransition}
+        whileInView={lateralTransition.floatUp}
+        className="text-center"
+      >
         <h2 className="mb-6 text-7xl font-bold max-md:text-4xl md:text-5xl">
           What People Say About Us
         </h2>
-      </div>
-      <div className="h-full w-full">
+      </motion.div>
+      <motion.div
+        variants={lateralTransition}
+        whileInView={lateralTransition.floatUp}
+        className="h-full w-full"
+      >
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -75,7 +85,7 @@ export default function Testimonial() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </div>
   );
 }

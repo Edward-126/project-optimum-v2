@@ -1,6 +1,8 @@
 import { urlFor, client } from "../../client";
+import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
+import { lateralTransition, stagger } from "../../constants/transitions";
 
 export default function Programs() {
   const [programs, setPrograms] = useState([]);
@@ -15,11 +17,19 @@ export default function Programs() {
 
   return (
     <div className="pt-16" id="programs">
-      <div className="">
-        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-6xl">
+      <motion.div variants={stagger} className="">
+        <motion.h2
+          variants={lateralTransition}
+          whileInView={lateralTransition.floatUp}
+          className="mb-6 text-7xl font-bold max-md:text-5xl md:text-6xl"
+        >
           Our Programs
-        </h2>
-        <p className="text-xl">
+        </motion.h2>
+        <motion.p
+          variants={lateralTransition}
+          whileInView={lateralTransition.floatUp}
+          className="text-xl"
+        >
           Experience transformation at Optimum Gym with our specialized
           programs. Sundays feature dynamic CrossFit, Thursdays bring HIIT
           Blast's calorie-burning intensity, and Tuesdays focus on
@@ -27,12 +37,16 @@ export default function Programs() {
           session is tailored to your fitness journey, whether you're a seasoned
           athlete or a beginner. Join us on Tuesday, Thursday, and Sunday to
           achieve your unique fitness goals.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
       <div className="mt-8 grid gap-8 lg:grid-cols-12">
         {programs.map((program, index) => (
-          <div className="lg:col-span-6" key={index}>
-            <div className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900">
+          <motion.div variants={stagger} className="lg:col-span-6" key={index}>
+            <motion.div
+              variants={lateralTransition}
+              whileInView={lateralTransition.floatUp}
+              className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900"
+            >
               <img
                 src={urlFor(program.imgUrl)}
                 alt={program.name}
@@ -47,8 +61,8 @@ export default function Programs() {
                   Every {program.day}
                 </span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </div>

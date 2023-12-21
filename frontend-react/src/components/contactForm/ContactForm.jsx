@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+
+import { lateralTransition, stagger } from "../../constants/transitions";
 import ModalComponent from "./ModalComponent";
 
 const ContactForm = () => {
@@ -30,12 +32,22 @@ const ContactForm = () => {
 
   return (
     <>
-      <h2 className="mb-4 font-bold max-md:text-4xl md:text-5xl">Contact Us</h2>
+      <motion.h2
+        variants={lateralTransition}
+        whileInView={lateralTransition.right}
+        className="mb-4 font-bold max-md:text-4xl md:text-5xl"
+      >
+        Contact Us
+      </motion.h2>
 
-      <div className="h-full w-full">
+      <motion.div variants={stagger} className="h-full w-full">
         <form className="" onSubmit={sendEmail} autoComplete="off">
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2">
-            <motion.div className="relative z-0">
+            <motion.div
+              variants={lateralTransition}
+              whileInView={lateralTransition.right}
+              className="relative z-0"
+            >
               <input
                 required
                 type="text"
@@ -48,7 +60,11 @@ const ContactForm = () => {
                 First Name
               </label>
             </motion.div>
-            <motion.div className="relative z-0">
+            <motion.div
+              variants={lateralTransition}
+              whileInView={lateralTransition.right}
+              className="relative z-0"
+            >
               <input
                 required
                 type="text"
@@ -61,7 +77,11 @@ const ContactForm = () => {
                 Last Name
               </label>
             </motion.div>
-            <motion.div className="relative z-0 sm:col-span-2">
+            <motion.div
+              variants={lateralTransition}
+              whileInView={lateralTransition.right}
+              className="relative z-0 sm:col-span-2"
+            >
               <input
                 required
                 type="text"
@@ -74,7 +94,11 @@ const ContactForm = () => {
                 Contact Number
               </label>
             </motion.div>
-            <motion.div className="relative z-0 sm:col-span-2">
+            <motion.div
+              variants={lateralTransition}
+              whileInView={lateralTransition.right}
+              className="relative z-0 sm:col-span-2"
+            >
               <textarea
                 required
                 id="message"
@@ -88,16 +112,21 @@ const ContactForm = () => {
               </label>
             </motion.div>
 
-            <button
+            <motion.button
+              variants={lateralTransition}
+              whileInView={lateralTransition.right}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
               className="mt-0 w-full rounded-lg bg-red-600 p-3 px-4 text-lg text-gray-50 drop-shadow sm:col-span-2"
               type="submit"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
+            </motion.button>
           </div>
         </form>
-      </div>
+      </motion.div>
 
       <ModalComponent
         showModal={showSuccessModal}

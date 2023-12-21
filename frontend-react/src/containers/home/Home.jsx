@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 import Navbar from "../../components/navbar/Navbar";
-import { lateralTransition, stagger } from "../../constants/transitions";
 import "./Home.css";
 
 const scaleVariants = {
