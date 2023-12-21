@@ -16,7 +16,9 @@ export default function Programs() {
   return (
     <div className="pt-16" id="programs">
       <div className="">
-        <h2 className="mb-6 text-6xl font-bold">Our Programs</h2>
+        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-7xl">
+          Our Programs
+        </h2>
         <p className="text-xl">
           Experience transformation at Optimum Gym with our specialized
           programs. Sundays feature dynamic CrossFit, Thursdays bring HIIT

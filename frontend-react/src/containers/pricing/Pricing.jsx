@@ -29,7 +29,9 @@ export default function Pricing() {
   return (
     <div className="pt-16" id="pricing">
       <div className="text-center">
-        <h2 className="mb-6 text-6xl font-bold">Our Membership Plans</h2>
+        <h2 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-7xl">
+          Our Membership Plans
+        </h2>
         <p className="text-xl">
           Choose the plan that suits your fitness goals and lifestyle. Whether
           you're looking for a quick workout, monthly access, or a year-round

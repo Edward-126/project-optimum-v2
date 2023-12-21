@@ -18,7 +18,7 @@ export default function About() {
       {about.map((abouts, index) => (
         <div className="grid gap-8 lg:grid-cols-12" key={index}>
           <div className="col-span-6 lg:col-span-5">
-            <div className="relative h-full w-full">
+            <div className="relative h-fit w-full">
               <img
                 src={urlFor(abouts.imgUrl)}
                 alt={abouts.name}
@@ -31,7 +31,7 @@ export default function About() {
           </div>
           <div className="col-span-6 lg:col-span-7">
             <div className="1 sticky top-10 mt-4 h-fit overflow-hidden lg:ml-8 lg:mt-0">
-              <h1 className="mb-6 text-6xl font-bold">
+              <h1 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-7xl">
                 About <span className=" text-red-600">Mr.Manoj Perera</span>
               </h1>
               <p className="text-xl">{abouts.about}</p>
