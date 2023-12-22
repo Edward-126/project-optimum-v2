@@ -12,7 +12,7 @@ export default function Footer() {
         <p className="font-base text-xs">
           Made with <FaHeart className=" inline-block" /> by{" "}
           <a
-            href="https://github.com/Edward-126"
+            href="https://edward-hyde.vercel.app/"
             target="_blank"
             rel="noreferrer"
             className="  transition-all duration-200 hover:text-gray-400"
