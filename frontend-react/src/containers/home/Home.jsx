@@ -26,16 +26,22 @@ export default function Home() {
             animate="whileInView"
             className=""
           >
-            <h1 className="mb-3 text-5xl font-bold md:text-7xl">
-              Unleash Your Full Potential at <br />{" "}
-              <span className="bg-white leading-normal text-black">
+            <div className=" font-zodiak text-center">
+              <h1 className="lenone text-5xl font-extrabold uppercase tracking-wide md:text-9xl">
                 Optimum
-              </span>{" "}
-              Gym.
-            </h1>
-            <h2 className="text-xl font-extralight md:text-2xl">
-              Where Fitness Meets Excellence
-            </h2>
+              </h1>
+              <h2 className="font-poppins text-xl font-semibold uppercase leading-relaxed tracking-wide text-red-600 md:text-4xl">
+                Power & Fitness
+              </h2>
+              <h1 className="text-5xl font-extrabold uppercase leading-none tracking-wide md:text-9xl">
+                Gym
+              </h1>
+
+              <p className=" font-poppins font-light md:text-xl">
+                Where Fitness Meets Excellence
+              </p>
+            </div>
+
             <div className="mt-6">
               <motion.button
                 className=""
@@ -45,8 +51,7 @@ export default function Home() {
               >
                 <motion.a
                   href="#programs"
-                  className="text-md mr-5 rounded-md border-2 border-red-600
-             bg-red-600 p-2 px-5 transition-all hover:border-red-500 hover:bg-red-500 md:p-2 md:px-6 md:text-xl"
+                  className=" mx-4 rounded-md  border-red-600 bg-red-600 p-2 px-4 transition-all hover:bg-red-500 md:text-lg"
                 >
                   Discover More
                 </motion.a>
@@ -61,7 +66,7 @@ export default function Home() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   href="#contact"
-                  className="m-5 hidden rounded-md border-2 border-red-600 bg-transparent p-2 px-6 text-xl transition-all hover:bg-red-600 md:inline"
+                  className=" mx-4 hidden rounded-md border border-red-600 bg-black/20 p-2 px-4 transition-all hover:bg-red-600 md:inline md:text-lg"
                 >
                   Register Now
                 </motion.a>
