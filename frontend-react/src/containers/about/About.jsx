@@ -33,9 +33,9 @@ export default function About() {
                 src={urlFor(abouts.imgUrl)}
                 alt={abouts.name}
                 loading="lazy"
-                className="w-full rounded-md border-2 border-gray-800"
+                className="w-full rounded-lg border-2 border-gray-800"
               />
-              <div className=" absolute bottom-0 left-0 w-full rounded-b-md bg-black/60">
+              <div className=" absolute bottom-0 left-0 w-full rounded-b-lg bg-black/60">
                 <h1 className="my-4 text-center text-lg">{abouts.name}</h1>
               </div>
             </motion.div>
