@@ -70,6 +70,7 @@ export default function Testimonial() {
                       className="h-20 w-20 rounded-full"
                       src={urlFor(testimonials.imgUrl)}
                       alt={testimonials.name}
+                      loading="lazy"
                     />
                     <div className="ml-4">
                       <p className="text-lg font-bold capitalize text-gray-300">

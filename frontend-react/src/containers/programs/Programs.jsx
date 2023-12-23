@@ -50,6 +50,7 @@ export default function Programs() {
               <img
                 src={urlFor(program.imgUrl)}
                 alt={program.name}
+                loading="lazy"
                 className="h-64 w-full object-cover"
               />
               <div className="p-4">
