@@ -50,7 +50,7 @@ export default function About() {
                 whileInView={lateralTransition.right}
                 className="mb-6 text-7xl font-bold max-md:text-5xl md:text-6xl"
               >
-                About <span className=" text-red-600">Mr.Manoj Perera</span>
+                About <span className=" text-red-600">{abouts.name}</span>
               </motion.h1>
               <motion.p
                 variants={lateralTransition}
