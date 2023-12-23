@@ -14,3 +14,44 @@
           Register Now
         </button>
       </div>
+
+
+
+
+
+      -----------
+
+
+
+
+
+
+
+
+      <div className="mt-8 grid gap-8 lg:grid-cols-12">
+        {programs.map((program, index) => (
+          <motion.div variants={stagger} className="lg:col-span-6" key={index}>
+            <motion.div
+              variants={lateralTransition}
+              whileInView={lateralTransition.floatUp}
+              className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900"
+            >
+              <img
+                src={urlFor(program.imgUrl)}
+                alt={program.name}
+                loading="lazy"
+                className="h-64 w-full object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-xl font-bold text-gray-100">
+                  {program.name}
+                </h2>
+                <p className="mt-2 text-base text-gray-300">{program.desc}</p>
+                <span className="mt-4 inline-block rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700">
+                  {program.day}
+                </span>
+              </div>
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>

@@ -30,22 +30,22 @@ export default function Programs() {
           whileInView={lateralTransition.floatUp}
           className="text-xl"
         >
-          Experience transformation at Optimum Gym with our specialized
-          programs. Sundays feature dynamic CrossFit, Thursdays bring HIIT
-          Blast's calorie-burning intensity, and Tuesdays focus on
-          muscle-sculpting Anaerobic training. Led by expert trainers, each
-          session is tailored to your fitness journey, whether you're a seasoned
-          athlete or a beginner. Join us on Tuesday, Thursday, and Sunday to
-          achieve your unique fitness goals.
+          At Optimum Gym, embark on a transformative fitness journey with
+          specialized programs like dynamic CrossFit on Sundays, calorie-burning
+          HIIT Blast on Thursdays, and muscle-sculpting Anaerobic training on
+          Tuesdays. Led by seasoned trainers, each session is tailored to meet
+          unique needs, whether you're a seasoned athlete or beginner. Daily
+          bodybuilding sessions, guided by qualified coaches, add a
+          comprehensive dimension to the fitness experience.
         </motion.p>
       </motion.div>
-      <div className="mt-8 grid gap-8 lg:grid-cols-12">
+      <div className="columns-1 gap-8 lg:columns-2">
         {programs.map((program, index) => (
           <motion.div variants={stagger} className="lg:col-span-6" key={index}>
             <motion.div
               variants={lateralTransition}
               whileInView={lateralTransition.floatUp}
-              className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900"
+              className="my-8 overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900"
             >
               <img
                 src={urlFor(program.imgUrl)}
@@ -59,7 +59,7 @@ export default function Programs() {
                 </h2>
                 <p className="mt-2 text-base text-gray-300">{program.desc}</p>
                 <span className="mt-4 inline-block rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700">
-                  Every {program.day}
+                  {program.day}
                 </span>
               </div>
             </motion.div>
