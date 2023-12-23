@@ -59,39 +59,49 @@ export default function Pricing() {
             className="lg:col-span-3"
             key={index}
           >
-            <motion.div className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900">
-              <div className="p-4">
-                <h2 className="text-2xl font-semibold text-gray-100">
-                  {price.name}
-                </h2>
-                <p className="mt-2 text-base text-gray-300">{price.desc}</p>
-                <h3 className="mt-4 text-2xl">
-                  Rs.{price.gentscg}.00{" "}
-                  <p className="inline-block text-base font-extralight uppercase">
-                    {" "}
-                    / {price.duration}
-                  </p>
-                </h3>
+            <div className="relative">
+              <motion.div className="overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900">
+                <div className=" p-4">
+                  <h2 className="text-2xl font-semibold text-gray-100">
+                    {price.name}
+                  </h2>
+                  <p className="mt-2 text-base text-gray-300">{price.desc}</p>
+                  <h3 className="mt-4 text-2xl">
+                    Rs.{price.gentscg}.00{" "}
+                    <p className="inline-block text-base font-extralight uppercase">
+                      {" "}
+                      / {price.duration}
+                    </p>
+                  </h3>
 
-                <hr className="my-6 border-t border-zinc-50/15" />
-                {price.tags.map((tag, index) => (
-                  <p className="mt-2 text-base text-gray-300" key={index}>
-                    <IoIosCheckmarkCircle className=" inline-block text-lg text-gray-50" />{" "}
-                    {tag}
-                  </p>
-                ))}
+                  <hr className="my-6 border-t border-zinc-50/15" />
+                  {price.tags.map((tag, index) => (
+                    <p className="mt-2 text-base text-gray-300" key={index}>
+                      <IoIosCheckmarkCircle className=" inline-block text-lg text-gray-50" />{" "}
+                      {tag}
+                    </p>
+                  ))}
 
-                <motion.button
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="mt-6 rounded-md bg-red-600 p-2 px-4"
-                  onClick={() => openModal(price)}
+                  <motion.button
+                    whileHover={{ scale: 1.04 }}
+                    whileTap={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    className="mt-6 rounded-md bg-red-600 p-2 px-4"
+                    onClick={() => openModal(price)}
+                  >
+                    View Details
+                  </motion.button>
+                </div>
+              </motion.div>
+              {price.isPopular && (
+                <div
+                  className="absolute -right-1 -top-2 animate-pulse rounded-full bg-red-600 p-[.1rem] px-2 text-sm"
+                  style={{ userSelect: "none" }}
                 >
-                  View Details
-                </motion.button>
-              </div>
-            </motion.div>
+                  Popular
+                </div>
+              )}
+            </div>
           </motion.div>
         ))}
       </motion.div>
