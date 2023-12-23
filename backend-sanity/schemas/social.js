@@ -24,6 +24,21 @@ export default {
       type: 'string',
     },
     {
+      name: 'facebookUrl',
+      title: 'Facebook-Url',
+      type: 'string',
+    },
+    {
+      name: 'instagram',
+      title: 'Instagram',
+      type: 'string',
+    },
+    {
+      name: 'instagramUrl',
+      title: 'Instagram-Url',
+      type: 'string',
+    },
+    {
       name: 'email',
       title: 'Email',
       type: 'string',

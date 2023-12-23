@@ -2,6 +2,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 import { urlFor, client } from "../../client";
 import { motion } from "framer-motion";
 
@@ -39,13 +40,13 @@ export default function Contact() {
                 className="mb-6 text-xl"
               >
                 <FaPhoneAlt className=" inline-block text-red-600" />{" "}
-                <a className=" inline-block py-1" href={`tel:${socials.tele}`}>
+                <a className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2" href={`tel:${socials.tele}`}>
                   {socials.tele}
                 </a>
                 <br />
                 <IoLogoWhatsapp className=" inline-block text-red-600" />{" "}
                 <a
-                  className=" inline-block py-1"
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2"
                   href={`tel:${socials.whatsapp}`}
                 >
                   {socials.whatsapp}
@@ -53,17 +54,27 @@ export default function Contact() {
                 <br />
                 <FaFacebook className=" inline-block text-red-600" />{" "}
                 <a
-                  className=" inline-block py-1"
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2"
                   target="_blank"
                   rel="noreferrer"
-                  href={socials.facebook}
+                  href={socials.facebookUrl}
                 >
-                  Optimum Gym
+                  {socials.facebook}
+                </a>
+                <br />
+                <AiFillInstagram className=" inline-block text-red-600" />{" "}
+                <a
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={socials.instagramUrl}
+                >
+                  {socials.instagram}
                 </a>
                 <br />
                 <MdEmail className=" inline-block text-red-600" />{" "}
                 <a
-                  className=" inline-block py-1"
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2"
                   target="_blank"
                   rel="noreferrer"
                   href={`mailto:${socials.email}`}
