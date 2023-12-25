@@ -69,19 +69,19 @@ export default function Coach() {
           {trainers.map((trainer, index) => (
             <SwiperSlide key={index}>
               <div className="flex h-full w-full items-center justify-center p-4">
-                <div class="flex flex-col rounded-md p-4 shadow-md hover:shadow-lg md:flex-row lg:w-2/3">
+                <div className="flex flex-col rounded-md p-4 shadow-md hover:shadow-lg md:flex-row lg:w-2/3">
                   <img
                     src={urlFor(trainer.imgUrl)}
                     alt={trainer.name}
-                    class="h-72 w-full rounded-md object-cover md:w-1/2"
+                    className="h-72 w-full rounded-md object-cover md:w-1/2"
                     loading="lazy"
                   />
-                  <div class="flex flex-col justify-center space-y-1 p-4 md:p-6">
+                  <div className="flex flex-col justify-center space-y-1 p-4 md:p-6">
                     <h1 className="text-sm font-light text-gray-300">
                       {trainer.position}
                     </h1>
-                    <h3 class="text-3xl font-semibold">{trainer.name}</h3>
-                    <p class="text-base">{trainer.desc}</p>
+                    <h3 className="text-3xl font-semibold">{trainer.name}</h3>
+                    <p className="text-base">{trainer.desc}</p>
                   </div>
                 </div>
               </div>

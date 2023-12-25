@@ -36,8 +36,8 @@ const Navbar = () => {
     <motion.div
       variants={nav}
       animate={nav.float}
-      className={`bg-gradient-to-b from-black via-50% px-6 py-4 text-gray-50 ${
-        isOpen ? "h-auto" : "h-15"
+      className={`relative z-10 bg-gradient-to-b from-black via-50% px-6 py-4 text-gray-50 ${
+        isOpen ? "h-auto bg-black" : "h-15"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between">
