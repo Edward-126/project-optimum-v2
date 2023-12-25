@@ -74,7 +74,6 @@ export default function Coach() {
                     src={urlFor(trainer.imgUrl)}
                     alt={trainer.name}
                     className="h-72 w-full rounded-md object-cover md:w-1/2"
-                    loading="lazy"
                   />
                   <div className="flex flex-col justify-center space-y-1 p-4 md:p-6">
                     <h1 className="text-sm font-light text-gray-300">
