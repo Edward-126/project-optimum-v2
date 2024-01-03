@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { urlFor, client } from "../../client";
 import { FaQuoteLeft } from "react-icons/fa";
+import { MdFeedback } from "react-icons/md";
 import { motion } from "framer-motion";
 
 import "swiper/css";
@@ -25,11 +26,22 @@ export default function Testimonial() {
       <motion.div
         variants={lateralTransition}
         whileInView={lateralTransition.floatUp}
-        className="text-center"
+        className="mb-5 text-center capitalize"
       >
-        <h2 className="mb-6 text-7xl font-bold max-md:text-4xl md:text-5xl">
+        <h2 className="mb-3 text-7xl font-bold max-md:text-4xl md:text-5xl">
           What People Say About Us
         </h2>
+        <p>
+          Provide your feedback here →{" "}
+          <a
+            href="https://project-optimum-feedback.vercel.app/"
+            className=" transition-all duration-300 hover:text-red-600"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <MdFeedback className=" inline-block text-sm" /> Feedback Form
+          </a>
+        </p>
       </motion.div>
       <motion.div
         variants={lateralTransition}
@@ -48,7 +60,7 @@ export default function Testimonial() {
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
+          className=""
           speed={600}
           effect={"fade"}
           fadeEffect={{

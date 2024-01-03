@@ -40,21 +40,24 @@ export default function Contact() {
                 className="mb-6 text-xl"
               >
                 <FaPhoneAlt className=" inline-block text-red-600" />{" "}
-                <a className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2" href={`tel:${socials.tele}`}>
+                <a
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 transition-all duration-300 hover:text-red-600 hover:underline-offset-2"
+                  href={`tel:${socials.tele}`}
+                >
                   {socials.tele}
                 </a>
                 <br />
                 <IoLogoWhatsapp className=" inline-block text-red-600" />{" "}
                 <a
-                  className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2"
-                  href={`tel:${socials.whatsapp}`}
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 transition-all duration-300 hover:text-red-600 hover:underline-offset-2"
+                  href={`https://wa.me/${socials.whatsapp}`}
                 >
-                  {socials.whatsapp}
+                  {socials.whatsappNumber}
                 </a>
                 <br />
                 <FaFacebook className=" inline-block text-red-600" />{" "}
                 <a
-                  className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2"
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 transition-all duration-300 hover:text-red-600 hover:underline-offset-2"
                   target="_blank"
                   rel="noreferrer"
                   href={socials.facebookUrl}
@@ -64,7 +67,7 @@ export default function Contact() {
                 <br />
                 <AiFillInstagram className=" inline-block text-red-600" />{" "}
                 <a
-                  className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2"
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 transition-all duration-300 hover:text-red-600 hover:underline-offset-2"
                   target="_blank"
                   rel="noreferrer"
                   href={socials.instagramUrl}
@@ -74,7 +77,7 @@ export default function Contact() {
                 <br />
                 <MdEmail className=" inline-block text-red-600" />{" "}
                 <a
-                  className=" inline-block py-1 underline decoration-1 underline-offset-4 hover:text-red-600 transition-all duration-300 hover:underline-offset-2"
+                  className=" inline-block py-1 underline decoration-1 underline-offset-4 transition-all duration-300 hover:text-red-600 hover:underline-offset-2"
                   target="_blank"
                   rel="noreferrer"
                   href={`mailto:${socials.email}`}

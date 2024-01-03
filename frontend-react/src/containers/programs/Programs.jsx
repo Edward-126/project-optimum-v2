@@ -28,7 +28,7 @@ export default function Programs() {
         <motion.p
           variants={lateralTransition}
           whileInView={lateralTransition.floatUp}
-          className="text-xl"
+          className="mb-8 text-xl"
         >
           At Optimum Gym, embark on a transformative fitness journey with
           specialized programs like dynamic CrossFit on Sundays, calorie-burning
@@ -45,7 +45,7 @@ export default function Programs() {
             <motion.div
               variants={lateralTransition}
               whileInView={lateralTransition.floatUp}
-              className="my-8 overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900"
+              className=" mb-8 overflow-hidden rounded-md border border-zinc-50/15 shadow-md transition-all duration-300 hover:border-zinc-50/15 hover:bg-zinc-900"
             >
               <img
                 src={urlFor(program.imgUrl)}

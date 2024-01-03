@@ -19,6 +19,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'whatsappNumber',
+      title: 'Whatsapp Number',
+      type: 'string',
+    },
+    {
       name: 'facebook',
       title: 'Facebook',
       type: 'string',
